@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-book-bg: #fdfaf6;
+  --color-book-text: #2b2b2b;
+  --color-book-accent: #8b2635;
+  --font-serif: "Merriweather", "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-book-bg);
+    color: var(--color-book-text);
+    font-family: var(--font-serif);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+}
