@@ -7,24 +7,20 @@ import { dictionaries, Locale } from "@/locales/dict";
 function RoleCard({
   imageSrc,
   name,
-  card,
   description,
 }: {
   imageSrc: string;
   name: string;
-  card: string;
   description: string;
 }) {
   return (
-    <div className="flex flex-col items-center p-4 border border-gray-300 rounded-lg shadow-sm bg-white m-4 w-64 text-center transition-transform hover:scale-105 hover:shadow-md">
-      <div className="relative w-56 h-80 mb-4 overflow-hidden rounded-md border border-gray-200">
-        <Image src={imageSrc} alt={name} fill className="object-cover" />
+    <div className="flex flex-col items-center m-4 w-64 text-center transition-transform hover:scale-105 drop-shadow-xl hover:drop-shadow-2xl hover:-translate-y-2 relative group">
+      <div className="border border-2 border-gray-700 rounded-2xl relative w-64 h-[358px] mb-2">
+        <Image src={imageSrc} alt={name} fill className="object-fill rounded-2xl" />
+        <div className="absolute bottom-[15%] left-[10%] right-[10%] h-[35%] flex items-center justify-center p-2">
+          <p className="text-[13px] md:text-sm font-serif leading-tight text-black group-hover:text-gray-900 transition-colors">{description}</p>
+        </div>
       </div>
-      <h3 className="text-xl font-bold font-serif mb-1">{name}</h3>
-      <p className="text-sm text-book-accent font-semibold mb-3 border-b border-gray-200 pb-2 inline-block">
-        {card}
-      </p>
-      <p className="text-sm font-serif leading-relaxed text-gray-700">{description}</p>
     </div>
   );
 }
@@ -100,51 +96,43 @@ export default function Home() {
         </h2>
         <div className="flex flex-wrap justify-center -mx-4 gap-y-8">
           <RoleCard
-            imageSrc="/cards/werewolf.png"
+            imageSrc="/cards/werewolf-ace_spades_no_bg.png"
             name={dict.roles.werewolf.name}
-            card={dict.roles.werewolf.card}
             description={dict.roles.werewolf.description}
           />
           <RoleCard
-            imageSrc="/cards/mason.png"
+            imageSrc="/cards/mason-ace_diamonds_no_bg.png"
             name={dict.roles.mason.name}
-            card={dict.roles.mason.card}
             description={dict.roles.mason.description}
           />
           <RoleCard
-            imageSrc="/cards/seer.png"
+            imageSrc="/cards/seer-jack_diamonds_no_bg.png"
             name={dict.roles.seer.name}
-            card={dict.roles.seer.card}
             description={dict.roles.seer.description}
           />
           <RoleCard
-            imageSrc="/cards/robber.png"
+            imageSrc="/cards/robber-jack_clubs_no_bg.png"
             name={dict.roles.robber.name}
-            card={dict.roles.robber.card}
             description={dict.roles.robber.description}
           />
           <RoleCard
-            imageSrc="/cards/troublemaker.png"
+            imageSrc="/cards/troublemaker-jack_spades_no_bg.png"
             name={dict.roles.troublemaker.name}
-            card={dict.roles.troublemaker.card}
             description={dict.roles.troublemaker.description}
           />
           <RoleCard
-            imageSrc="/cards/insomniac.png"
+            imageSrc="/cards/insomniac-king_clubs_no_bg.png"
             name={dict.roles.insomniac.name}
-            card={dict.roles.insomniac.card}
             description={dict.roles.insomniac.description}
           />
           <RoleCard
-            imageSrc="/cards/tanner.png"
+            imageSrc="/cards/tanner-king_hearts_no_bg.png"
             name={dict.roles.tanner.name}
-            card={dict.roles.tanner.card}
             description={dict.roles.tanner.description}
           />
           <RoleCard
-            imageSrc="/cards/hunter.png"
+            imageSrc="/cards/hunter-jack_hearts_no_bg.png"
             name={dict.roles.hunter.name}
-            card={dict.roles.hunter.card}
             description={dict.roles.hunter.description}
           />
         </div>
